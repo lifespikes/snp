@@ -64,6 +64,20 @@ public function store(Lead $lead, CreateLeadMessageRequest $request): Message
 
 But, the implementation and actual dev time to get to this point would be much shorter! Best of all, if done properly, we still keep our software decoupled and our concerns mostly separate.
 
+**EDIT 12/10/22 - Tolerance**
+Naturally, we can't have every single module out there be treated as a "central module", and a lack of a proper definition could leave room for error when making new modules.
+
+After some experience refactoring a module that now applied this change to the pattern, I noticed that the main factor simply comes down to **data relationships** and **usages**.
+
+If a module is:
+  - Central to platform functionality
+  - Referenced or likely to be referenced heavily throughout integration code
+  - Forms a core component of the wider business domain
+  - Features plenty of relationships against multiple models across domains
+  - **Sub-modules** of the module **must** also have the above items.
+
+You may consider this a central module.
+
 ### Cost and Alternatives
 Continuing to keep central modules decoupled and accessible through abstraction is not impossible, and itself comes with benefits.
 
@@ -72,5 +86,4 @@ One of the issues with tighly coupling central modules is a decrease in the rigi
 Some of these downsides could be offset by enforcing "banned code" rules for code that is too magical, or writing custom PHPStan rules, but overall, it would require discretion from all developers when building into the integration layer.
 
 ### Unanswered Questions
-- Most of all I would like to define WHAT the tolerance or criterion is for a "central module", as well as what limitations there should be. Central modules should be a single resource or two at most, otherwise, it defeats the purpose of assisting integration and instead becomes an excuse to avoid abstraction.
 - Second, thinking about bi-directional or proxy relations. Modules are decoupled, and cannot depend on each other, but database design sometimes requires this. Proxy models like `LeadMessage` can assist with this problem, but also present their own problems. 
