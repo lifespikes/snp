@@ -1,7 +1,7 @@
 - Author: Cristian Herrera <cristian@ocmiwc.com>
 - Original Date: 11/08/2022
 
-# Solely using attributes specify Inertia component views
+# Solely using attributes to specify Inertia views
 This RFC covers an alternative, more REST-friendly usage of Inertia, one of the main components of our development stack.
 
 Most impactfully, this RFC would stop usages of most Inertia response helpers and instead restore standard JSON/array responses from Laravel controllers.
