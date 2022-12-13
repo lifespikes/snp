@@ -78,6 +78,10 @@ If a module is:
 
 You may consider this a central module.
 
+#### Support graphic: Is it a central module?
+
+![image](https://user-images.githubusercontent.com/4695165/207470418-73ea9297-d917-4006-9473-b9416f1007f5.png)
+
 ### Cost and Alternatives
 Continuing to keep central modules decoupled and accessible through abstraction is not impossible, and itself comes with benefits.
 
