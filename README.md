@@ -6,6 +6,7 @@ All development standards and practices of LS and adjacent teams.
 |             Name           |                                  Description                                 | Link |
 | -------------------------- | ---------------------------------------------------------------------------- | ---- |
 | Solely using attributes to specify Inertia views | Leveraging Inertia in a cleaner, API-friendly way. | [View](https://github.com/lifespikes/snp/blob/master/rfcs/2022-11-08-inertia-component-attributes.md) |
+| Abstraction exemption for central app modules | Improve development experience with simpler integration. | [View](https://github.com/lifespikes/snp/blob/master/rfcs/2022-12-06-coupled-central-modules-integration.md) |
 
 ## What is this?
 An experimental approach on documenting what we will call "The LifeSpikes Way". Similar to other repositories owned by working groups, SNP will feature an arrangement of markdown files that specify things like:
